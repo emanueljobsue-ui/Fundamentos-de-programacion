@@ -1,0 +1,20 @@
+def f_capicua(n):
+    invertido = 0
+    aux = n
+    while n > 0:
+        dig = n % 10
+        n = n // 10
+        invertido = invertido * 10 + dig
+    if invertido== aux:
+        return 1
+    else:
+        return 0
+    
+n=int(input(" Ingrese un numero entero (0 para terminar):"))
+while(n>0):
+    capi=f_capicua(n)
+    if(capi==1):
+        print(" El numero es capicua")
+    else:
+        print("El numero no es capicua")
+    n=int(input(" Ingrese un numero entero (0 para terminar):"))
